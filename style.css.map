@@ -5,7 +5,7 @@
         "style.scss",
         "base/_reset.scss",
         "base/_colors.scss",
-        "abstracts/mixin.scss"
+        "abstracts/_mixin.scss"
     ],
     "names": [],
     "file": "style.css"
