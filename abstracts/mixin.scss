@@ -1,0 +1,19 @@
+@mixin item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    height: 200px;
+    font-size: 6em;
+    color: $color-font;
+    font-weight: bold;
+    border: 2px solid $color-font;
+}
+
+@mixin main-font {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@mixin background {
+    background: url(./images/blur-clean.jpg) center center/cover no-repeat fixed;
+}

@@ -1,0 +1,50 @@
+@import "./base/reset";
+@import "./base/colors";
+@import "./abstracts/mixin.scss";
+
+@keyframes freefall{
+    from{
+        transform: translateY(-600px);
+    }
+    to{
+        transform: translateY(0);
+        visibility: visible;
+    }
+}
+
+body{
+    @include background;
+    @include main-font;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.main-container{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    visibility: hidden;
+
+    .item:nth-child(1){
+        @include item;
+        background-color: $bgcolor-item1;
+        animation: freefall 1.5s ease-out 1.5s 1 forwards;
+    }
+
+    .item:nth-child(2){
+        @include item;
+        background-color: $bgcolor-item2;
+        animation: freefall 1.5s ease-out 3s 1 forwards;
+    }
+
+    .item:nth-child(3){
+        @include item;
+        background-color: $bgcolor-item3;
+        animation: freefall 1.5s ease-out 4.5s 1 forwards;
+    }
+}
